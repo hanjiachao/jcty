@@ -1,0 +1,18 @@
+<!--pages/search/search.wxml-->
+<view class="conts">
+  <view class="logo">
+    <image src="../../images/logo2.png" mode="widthFix"></image>
+  </view>
+  <view class="form">
+    <view class="section">
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{typeArr}}">
+        <view class="picker">
+          {{typeText == '' ? '车牌/临牌/车架号' : typeText}}
+        </view>
+        <image src="../../images/down.png" mode="widthFix"></image>
+      </picker>
+    </view>
+    <input class="car_id" bindinput="getCarId" placeholder-style="font-size: 30rpx;color: #ccc;font-weight: 400;" placeholder="请输入车牌/临牌/车架号"></input>
+  </view>
+  <view class="btn" bindtap="submitSearch">下一步</view>
+</view>

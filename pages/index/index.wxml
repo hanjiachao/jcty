@@ -1,0 +1,24 @@
+<!--index.wxml-->
+<view class="conts">
+  <!-- <view class="head_top" wx:if="{{userInfoFlag}}">
+    <view class="text left">您还没有登录，请先登录。</view>
+    <button class='bottom right' type='primary' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo">点击登录</button>
+  </view> -->
+  <view class="logo">
+    <image src="../../images/logo2.png" mode="widthFix"></image>
+  </view>
+  <view class="list">
+    <view class="item" bindtap="toAdd">
+      <view class="img">
+        <image mode="widthFix" src="../../images/icon1.png"></image>
+      </view>
+      <text>我要新增</text>
+    </view>
+    <view class="item" bindtap="toSearch">
+      <view class="img">
+        <image mode="widthFix" src="../../images/icon2.png"></image>
+      </view>
+      <text>我要查找</text>
+    </view>
+  </view>
+</view>

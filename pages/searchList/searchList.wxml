@@ -1,0 +1,21 @@
+<!--pages/searchList/searchList.wxml-->
+<view class="list">
+  <view class="item" wx:for='{{list}}' wx:key='index' data-info="{{item}}" bindtap="toLookCar">
+    <view class="tit">{{item.c_number_type}}：<text>{{item.c_number}}</text></view>
+    <view class="type">车辆名称：{{item.c_name}}</view>
+    <view class="stie">起始地：{{item.c_start_address}}</view>
+	<view class="stie">到达地：{{item.c_end_address}}</view>
+    <view class="time">添加时间：{{item.add_time}}</view>
+  </view>
+</view>
+<view class="shade" wx:if="{{shadeFlage}}" bindtap="closeShade">
+  <view class="shade_box" catchtap="shadeFlag">
+	<image class="close" src="../../images/delete.png" mode="widthFix" catchtap="closeShade"></image>
+    <view class="text">{{info.c_start_address}}-{{info.c_end_address}}</view>
+    <view class="text">{{info.c_name}}</view>
+    <view class="text">{{info.c_number}}</view>
+	<view class="btm_btn" catchtap="edit">修改</view>
+    <button class="sharre_btn btm_btn" open-type="share">分享</button>
+    <view class="btm_btn" catchtap="shadeSuccess">去验车</view>
+  </view>
+</view>

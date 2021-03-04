@@ -1,0 +1,38 @@
+<!--pages/add/add.wxml-->
+<view class="conts">
+  <view class="logo">
+    <image src="../../images/logo2.png" mode="widthFix"></image>
+  </view>
+  <view class="form">
+    <view class="section">
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{typeArr}}">
+        <view class="picker">
+          {{typeText == '' ? '车牌/临牌/车架号' : typeText}}
+        </view>
+        <image src="../../images/down.png" mode="widthFix"></image>
+      </picker>
+    </view>
+    <input class="car_id" bindinput="getCarId" placeholder-style="font-size: 30rpx;color: #ccc;font-weight: 400;" placeholder="请输入车牌/临牌/车架号" value="{{carId}}"></input>
+    <view class="ipt_list">
+      <view class="item clearfix">
+        <view class="text left">车辆名称：</view>
+        <view class="ipt">
+          <input bindinput="getCarInfo" value="{{carInfo}}"></input>
+        </view>
+      </view>
+      <view class="item clearfix">
+        <text class="text left" decode="{{true}}" space="{{true}}">起&nbsp;&nbsp;始&nbsp;&nbsp;地：</text>
+        <view class="ipt">
+          <input bindinput="getStart" value="{{start}}"></input>
+        </view>
+      </view>
+      <view class="item clearfix">
+        <text class="text left" decode="{{true}}" space="{{true}}">到&nbsp;&nbsp;达&nbsp;&nbsp;地：</text>
+        <view class="ipt">
+          <input bindinput="getEnd" value="{{end}}"></input>
+        </view>
+      </view>
+    </view>
+  </view>
+  <button class="btn" bindtap="submitInfo">完成</button>
+</view>

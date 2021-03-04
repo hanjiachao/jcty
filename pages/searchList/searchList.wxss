@@ -1,0 +1,61 @@
+/* pages/searchList/searchList.wxss */
+page{
+  background: rgb(247, 246, 246);
+}
+.list .item{
+  background: #fff;
+  margin-bottom: 20rpx;
+  padding: 20rpx 30rpx;
+  font-size: 32rpx;
+  line-height: 46rpx;
+}
+.list .item .tit{
+  font-size: 32rpx;
+}
+.list .item .tit text{
+  color: #FF8903;
+}
+.shade{
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background: rgba(0, 0, 0, .6);
+  z-index: 999;
+}
+.shade .shade_box{
+  width: 600rpx;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background: #fff;
+  border-radius: 10rpx;
+  padding-top: 60rpx;
+  text-align: center;
+  box-shadow: 2rpx 2rpx 5rpx 0rpx rgba(102, 102, 102, 0.2);
+  overflow: hidden;
+}
+.shade .shade_box .close{
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 36rpx;
+  height: 36rpx;
+  padding: 20rpx;
+}
+.shade .shade_box .text{
+  line-height: 80rpx;
+}
+.shade .shade_box .btm_btn{
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  color: #fff;
+  font-size: 32rpx;
+  padding: 0;
+  font-weight: 400;
+  margin-top: 20rpx;
+  background: #FF8903;
+}

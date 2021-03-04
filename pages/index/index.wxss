@@ -1,0 +1,55 @@
+/**index.wxss**/
+.conts{
+  padding: 0 30rpx;
+}
+.conts .head_top{
+  background: #F0F0F0;
+  padding: 0 30rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  overflow: hidden;
+}
+.conts .head_top .text{
+  color: #000;
+  font-size: 32rpx;
+}
+.conts .head_top .bottom{
+  width: 150rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  font-size: 28rpx;
+  font-weight: 400;
+  background: #FF8903;
+  padding: 0;
+  margin-top: 20rpx;
+}
+.conts .logo{
+  width: 300rpx;
+  margin: 60rpx auto 0;
+}
+.conts .list{
+  margin-top: 140rpx;
+  text-align: center;
+  font-size: 0;
+}
+.conts .list .item{
+  display: inline-block;
+  width: 300rpx;
+  text-align: center;
+  margin-right: 60rpx;
+  padding: 60rpx 30rpx;
+  border: 2rpx solid #ccc;
+  box-sizing: border-box;
+}
+.conts .list .item:last-child{
+  margin-right: 0;
+}
+.conts .list .item .img{
+  width: 100rpx;
+  margin: 50rpx auto;
+}
+.conts .list .item text{
+  font-size: 32rpx;
+  color: #000;
+}

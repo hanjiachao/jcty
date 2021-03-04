@@ -1,0 +1,129 @@
+/* pages/video/video.wxss */
+.conts{
+  padding: 0 30rpx 30rpx;
+}
+.conts .top{
+  padding-bottom: 40rpx;
+}
+.conts .top .text{
+  color: #000;
+  font-size: 32rpx;
+  line-height: 60rpx;
+}
+.list{
+  border-top: 2rpx solid #ccc;
+  padding-top: 30rpx;
+}
+.list.borderTop{
+  border-top: 4rpx solid #ccc;
+  padding-top: 0;
+}
+.list .tip{
+	font-size: 24rpx;
+	color: #888;
+	line-height: 60rpx;
+	text-align: center;
+}
+.list .text{
+  color: #000;
+  font-size: 32rpx;
+  margin-bottom: 30rpx;
+}
+.list .item{
+  float: left;
+  text-align: center;
+  margin-bottom: 30rpx;
+  margin-right: 30rpx;
+}
+.list .item .box{
+  width: 200rpx;
+  height: 300rpx;
+  background: #E8641A;
+  overflow: hidden;
+}
+.list .item .box video{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.list .item .box image{
+  width: 100%;
+  height: 100%;
+}
+.list .item .box .add{
+  width: 100rpx;
+  margin: 100rpx auto;
+}
+.list .item text{
+  display: block;
+  color: #8D8D8D;
+  font-size: 20rpx;
+  padding-top: 20rpx;
+}
+/* .conts .btn{
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  color: #fff;
+  background: #FF8903;
+  margin-top: 60rpx;
+} */
+.btns{
+	margin-top: 60rpx;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.btns .btn{
+	width: 47%;
+	height: 80rpx;
+	line-height: 80rpx;
+	text-align: center;
+	color: #fff;
+	background: #FF8903;
+	padding: 0;
+	font-size: 30rpx;
+	font-weight: normal;
+	border-radius: 6rpx;
+}
+.prew_video{
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, .8)
+}
+.prew_video video{
+  width: 100%;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.shareBtn{
+	width: 80rpx !important;
+	position: fixed;
+	right: 30rpx;
+	top: 40%;
+	padding: 15rpx 0;
+	background: #ff8903;
+	border-radius: 8rpx;
+}
+.shareBtn .shareImg{
+	width: 80rpx;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.shareBtn .shareImg image{
+	width: 44rpx;
+	height: 44rpx;
+}
+.shareBtn .text{
+	margin-top: 6rpx;
+	color: #ff8903;
+	font-size: 22rpx;
+	line-height: 30rpx;
+	color: #fff;
+	font-weight: normal;
+}

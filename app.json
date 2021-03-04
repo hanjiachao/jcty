@@ -1,0 +1,20 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/picture/picture",
+    "pages/video/video",
+    "pages/checkout/checkout",
+    "pages/add/add",
+    "pages/searchList/searchList",
+    "pages/search/search",
+	"pages/edit/edit"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "轿车托运",
+    "navigationBarTextStyle":"black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

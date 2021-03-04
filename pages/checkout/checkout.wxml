@@ -1,0 +1,32 @@
+<!--pages/checkout/checkout.wxml-->
+<view class="conts">
+  <view class="top">
+    <view class="text">车辆名称：{{info.c_name}}</view>
+    <view class="text" wx:if="{{info.c_number != ''}}">{{info.c_number_type}}：{{info.c_number}}</view>
+	<view class="text">起运地：{{info.c_start_address}}</view>
+	<view class="text">到达地：{{info.c_end_address}}</view>
+	<view class="text">添加时间：{{info.add_time}}</view>
+  </view>
+  <view class="form" wx:if="{{info.c_number == ''}}">
+    <view class="text"><image src="../../images/error.png" mode="widthFix"></image>您的信息有缺失，请完善车辆信息！</view>
+    <view class="section">
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{typeArr}}">
+        <view class="picker">
+          {{typeText == '' ? '车牌/临牌/车架号' : typeText}}
+        </view>
+        <image src="../../images/down.png" mode="widthFix"></image>
+      </picker>
+    </view>
+	<view class="inputContent">
+		<input class="car_id" bindinput="getCarId" focus="{{focus}}" placeholder-style="font-size: 30rpx;color: #ccc;font-weight: 400;" bindfocus="bindfocus" bindblur="bindblur" placeholder="请输入车牌/临牌/车架号"></input>
+		<view class="inputBtn" catchtap="changeFocus">{{focus ? '确定' : '修改'}}</view>
+	</view>
+  </view>
+  <view class="btns">
+	  <!-- <button class="share" open-type="share">
+		  <image src="../../images/share.png" mode="widthFix"></image>
+	  </button> -->
+	  <view class="btn" bindtap="photograph">拍照验车/验车结果</view>
+	  <view class="btn" bindtap="videoShoot">视频验车/验车结果</view>
+  </view>
+</view>

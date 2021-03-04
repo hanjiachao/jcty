@@ -1,0 +1,157 @@
+<!--pages/video/video.wxml-->
+<view class="conts">
+  <view class="top">
+     <view class="text">车辆名称：{{info.c_name}}</view>
+     <view class="text" wx:if="{{info.c_number != ''}}">{{info.c_number_type}}：{{info.c_number}}</view>
+     <view class="text">起运地：{{info.c_start_address}}</view>
+     <view class="text">到达地：{{info.c_end_address}}</view>
+     <view class="text">添加时间：{{info.add_time}}</view>
+  </view>
+  <view class="list">
+    <view class="text">行驶证/临牌（正反面）/车架号照片：</view>
+    <view class="clearfix">
+      <view class="item" wx:for="{{list0}}" wx:key='index'>
+        <view class="box">
+          <image src="{{item.cf_file}}" data-url="{{item.cf_file}}" bindtap="imgLook"></image>
+        </view>
+        <text>{{item.time}}</text>
+      </view>
+      <view class="item" data-idx="0" bindtap="uploadImg" wx:if="{{info.c_status != '已完成'}}">
+        <view class="box">
+          <image class="add" src="../../images/add.png" mode="widthFix"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="list">
+    <view class="text">起运地里程表照片：</view>
+    <view class="clearfix">
+      <view class="item" wx:for="{{list1}}" wx:key='index'>
+        <view class="box">
+          <image src="{{item.cf_file}}" data-url="{{item.cf_file}}" bindtap="imgLook"></image>
+        </view>
+        <text>{{item.time}}</text>
+      </view>
+      <view class="item" data-idx="1" bindtap="uploadImg" wx:if="{{info.c_status != '已完成'}}">
+        <view class="box">
+          <image class="add" src="../../images/add.png" mode="widthFix"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- <view class="list">
+    <view class="text">公里数视频</view>
+    <view class="clearfix">
+      <view class="item" wx:for="{{list1}}" wx:key='index'>
+        <view class="box">
+          <video src="{{item.cf_file}}" object-fit='cover' data-url="{{item.cf_file}}" bindtap="videoLook"></video>
+        </view>
+        <text>{{item.time}}</text>
+      </view>
+      <view class="item" data-idx="1" bindtap="uploadImg" wx:if="{{info.c_status != '已完成'}}">
+        <view class="box">
+          <image class="add" src="../../images/add.png" mode="widthFix"></image>
+        </view>
+      </view>
+    </view>
+  </view> -->
+  <view class="list">
+    <view class="text">起运地车损视频：</view>
+    <view class="clearfix">
+      <view class="item" wx:for="{{list2}}" wx:key='index'>
+        <view class="box">
+          <video src="{{item.cf_file}}" object-fit='cover' data-url="{{item.cf_file}}" bindtap="videoLook"></video>
+        </view>
+        <text>{{item.time}}</text>
+      </view>
+      <view class="item" data-idx="2" bindtap="uploadVideo" wx:if="{{info.c_status != '已完成'}}">
+        <view class="box">
+          <image class="add" src="../../images/add.png" mode="widthFix"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="list">
+    <view class="text">起运地随车物品视频：</view>
+    <view class="clearfix">
+      <view class="item" wx:for="{{list3}}" wx:key='index'>
+        <view class="box">
+          <video src="{{item.cf_file}}" object-fit='cover' data-url="{{item.cf_file}}" bindtap="videoLook"></video>
+        </view>
+        <text>{{item.time}}</text>
+      </view>
+      <view class="item" data-idx="3" bindtap="uploadVideo" wx:if="{{info.c_status != '已完成'}}">
+        <view class="box">
+          <image class="add" src="../../images/add.png" mode="widthFix"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="list borderTop">
+  	<view class="tip">如有异常，请更新以下照片</view>
+    <view class="text" style="color: #FE0000;">中转地里程照片：</view>
+    <view class="clearfix">
+      <view class="item" wx:for="{{list4}}" wx:key='index'>
+        <view class="box">
+          <image src="{{item.cf_file}}" data-url="{{item.cf_file}}" bindtap="imgLook"></image>
+        </view>
+        <text>{{item.time}}</text>
+      </view>
+      <view class="item" data-idx="4" bindtap="uploadImg" wx:if="{{info.c_status != '已完成'}}">
+        <view class="box">
+          <image class="add" src="../../images/add.png" mode="widthFix"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="list">
+    <view class="text" style="color: #FE0000;">中转地新增车损视频：</view>
+    <view class="clearfix">
+      <view class="item" wx:for="{{list5}}" wx:key='index'>
+        <view class="box">
+          <video src="{{item.cf_file}}" object-fit='cover' data-url="{{item.cf_file}}" bindtap="videoLook"></video>
+        </view>
+        <text>{{item.time}}</text>
+      </view>
+      <view class="item" data-idx="5" bindtap="uploadVideo" wx:if="{{info.c_status != '已完成'}}">
+        <view class="box">
+          <image class="add" src="../../images/add.png" mode="widthFix"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="list">
+    <view class="text" style="color: #FE0000;">中转地新增随车物品视频：</view>
+    <view class="clearfix">
+      <view class="item" wx:for="{{list6}}" wx:key='index'>
+        <view class="box">
+          <video src="{{item.cf_file}}" object-fit='cover' data-url="{{item.cf_file}}" bindtap="videoLook"></video>
+        </view>
+        <text>{{item.time}}</text>
+      </view>
+      <view class="item" data-idx="6" bindtap="uploadVideo" wx:if="{{info.c_status != '已完成'}}">
+        <view class="box">
+          <image class="add" src="../../images/add.png" mode="widthFix"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- <view class="btn" bindtap="submitComplete">完成并新增</view> -->
+  <view class="btns">
+  	  <view class="btn" bindtap="submitComplete">新增</view>
+  	  <button class="btn" open-type="share">完成并发送</button>
+  </view>
+  <button class="shareBtn" open-type="share">
+  	  <view class="shareImg">
+  		  <image src="../../images/share.png" mode="widthFix"></image>
+  	  </view>
+  	  <view class="text">发送</view>
+  </button>
+</view>
+<view class="prew_video" hidden="{{chooesVideo==''}}" bindtap="closeVideoLook">
+  <video id="prew_video" 
+        autoplay="true" 
+        muted="{{!playVideo}}"
+        catchtap="bindVideoScreenChange"
+        src="{{chooesVideo}}" ></video>
+</view>
